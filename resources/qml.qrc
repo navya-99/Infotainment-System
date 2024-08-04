@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/">
+        <file>qml/main.qml</file>
+        <file>qml/HomeScreen.qml</file>
+        <file>qml/Themes/DefaultTheme.qml</file>
+        <file>qml/Themes/qmldir</file>
+        <file>qml/MapsScreen.qml</file>
+    </qresource>
+</RCC>
