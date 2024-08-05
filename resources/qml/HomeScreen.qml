@@ -36,18 +36,80 @@ Rectangle {
         anchors.left: header.left
         anchors.top: header.bottom
         anchors.topMargin: DefaultTheme.margins
-        width: 200; height: 100
+        width: DefaultTheme.appWidth
+        height: DefaultTheme.appHeight
         color: DefaultTheme.buttonColor
         Text {
-            id: box1text
             anchors.centerIn: parent
             font.pixelSize: DefaultTheme.fontSize
             color: DefaultTheme.textColor
             text: qsTr("Map")
         }
         MouseArea {
-              anchors.fill: parent
-              onClicked: stack.push("qrc:/qml/MapsScreen.qml")
-          }
+            anchors.fill: parent
+            onClicked: stack.push("qrc:/qml/MapsScreen.qml")
+        }
+    }
+
+    Rectangle{
+        id: box2
+        anchors.left: box1.right
+        anchors.leftMargin: DefaultTheme.margins
+        anchors.top: header.bottom
+        anchors.topMargin: DefaultTheme.margins
+        width: DefaultTheme.appWidth
+        height: DefaultTheme.appHeight
+        color: DefaultTheme.buttonColor
+        Text {
+            anchors.centerIn: parent
+            font.pixelSize: DefaultTheme.fontSize
+            color: DefaultTheme.textColor
+            text: qsTr("Music")
+        }
+        MouseArea {
+            anchors.fill: parent
+            onClicked: stack.push("qrc:/qml/MusicScreen.qml")
+        }
+    }
+
+    Rectangle{
+        id: box3
+        anchors.top: box1.bottom
+        anchors.topMargin: DefaultTheme.margins
+        anchors.left: header.left
+        width: DefaultTheme.appWidth
+        height: DefaultTheme.appHeight
+        color: DefaultTheme.buttonColor
+        Text {
+            anchors.centerIn: parent
+            font.pixelSize: DefaultTheme.fontSize
+            color: DefaultTheme.textColor
+            text: qsTr("Phone")
+        }
+        MouseArea {
+            anchors.fill: parent
+            onClicked: stack.push("qrc:/qml/PhoneScreen.qml")
+        }
+    }
+
+    Rectangle{
+        id: box4
+        anchors.top: box2.bottom
+        anchors.topMargin: DefaultTheme.margins
+        anchors.left: box3.right
+        anchors.leftMargin: DefaultTheme.margins
+        width: DefaultTheme.appWidth
+        height: DefaultTheme.appHeight
+        color: DefaultTheme.buttonColor
+        Text {
+            anchors.centerIn: parent
+            font.pixelSize: DefaultTheme.fontSize
+            color: DefaultTheme.textColor
+            text: qsTr("Settings")
+        }
+        MouseArea {
+            anchors.fill: parent
+            onClicked: stack.push("qrc:/qml/SettingScreen.qml")
+        }
     }
 }

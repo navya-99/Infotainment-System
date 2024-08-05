@@ -3,18 +3,18 @@ import QtQuick.Window 2.15
 import QtQuick.Controls 2.15
 // import QtQuick.VirtualKeyboard 2.15
 
+import Themes 1.0
+
 Window {
     id: window
-    width: 640
-    height: 480
+    width: DefaultTheme.width
+    height: DefaultTheme.height
     visible: true
-    title: qsTr("Hello World")
+    flags: Qt.FramelessWindowHint
 
     HomeScreen{
         id: mainView
-        anchors{
-            fill: parent
-        }
+        anchors.fill: parent
     }
 
     StackView {

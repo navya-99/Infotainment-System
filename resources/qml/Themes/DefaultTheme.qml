@@ -2,16 +2,18 @@ pragma Singleton
 import QtQuick 2.15
 
 QtObject {
-    property int width: 800
-    property int height: 480
+    property int width: 540
+    property int height: 380
+    property int appWidth: 240
+    property int appHeight: 120
 
     property int fontSizeL: 30
     property int fontSize: 20
     property int fontSizeS: 18
 
-    property color backgroundColor: "#28243D"
+    property color backgroundColor: "#101C30"
     property color primaryColor: "#645A99"
-    property color buttonColor: "#4184AF"
+    property color buttonColor: "#132440"
     property color separatorColor: "yellow"
     property color textColor: "#FFFFFF"
     property color logoColor: "#F6781D"

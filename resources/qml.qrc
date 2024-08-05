@@ -5,5 +5,8 @@
         <file>qml/Themes/DefaultTheme.qml</file>
         <file>qml/Themes/qmldir</file>
         <file>qml/MapsScreen.qml</file>
+        <file>qml/MusicScreen.qml</file>
+        <file>qml/PhoneScreen.qml</file>
+        <file>qml/SettingScreen.qml</file>
     </qresource>
 </RCC>
