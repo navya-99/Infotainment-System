@@ -2,8 +2,8 @@ pragma Singleton
 import QtQuick 2.15
 
 QtObject {
-    property int width: 540
-    property int height: 400
+    property int width: 600
+    property int height: 350
 
     property int fontSizeL: 30
     property int fontSize: 20
@@ -24,7 +24,7 @@ QtObject {
     property int scrollBarThickness: 10
     property int borderWidth: 1
     property int spacing: 10
-    property int margins: 20
-    property int margins2: 40
+    property int margins: 30
+    property int margins2: 60
     property int radius: 4
 }
