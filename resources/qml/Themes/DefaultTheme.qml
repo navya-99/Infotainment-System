@@ -11,7 +11,7 @@ QtObject {
 
     property color backgroundColor: "#101115"
     property color primaryColor: "#645A99"
-    property color buttonColor: "#66687A"
+    property color buttonColor: "#3F3F42"
     property color separatorColor: "yellow"
     property color textColor: "#FFFFFF"
     property color logoColor: "#F6781D"

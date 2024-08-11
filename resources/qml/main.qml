@@ -19,9 +19,12 @@ Window {
         source: "qrc:/fonts/fontawesome.otf"
     }
 
-    HomeScreen{
+    Component{
         id: mainView
-        anchors.fill: parent
+        HomeScreen{
+            width: window.width
+            height: window.height
+        }
     }
 
     StackView {
