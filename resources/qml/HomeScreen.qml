@@ -17,7 +17,6 @@ import Themes 1.0
 
 Rectangle {
     id: root
-    anchors.fill: parent
     color: DefaultTheme.backgroundColor
 
     Timer {
