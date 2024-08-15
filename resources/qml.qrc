@@ -8,5 +8,6 @@
         <file>qml/MusicScreen.qml</file>
         <file>qml/PhoneScreen.qml</file>
         <file>qml/SettingScreen.qml</file>
+        <file>qml/Contacts.qml</file>
     </qresource>
 </RCC>

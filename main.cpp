@@ -1,5 +1,7 @@
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
+#include "contactmodel.h"
+#include <qqmlcontext.h>
 
 #include <QLocale>
 #include <QTranslator>
@@ -13,6 +15,12 @@ int main(int argc, char *argv[])
 #endif
     QGuiApplication app(argc, argv);
 
+    //Creates a ContactModel and adds a few Contact objects to it.
+    ContactModel model;
+    model.addContact(Contact("Navya Padiyar", "0099999999"));
+    model.addContact(Contact("Nidhi Padiyar", "123456789"));
+    model.addContact(Contact("Amma", "1111199999"));
+
     QTranslator translator;
     const QStringList uiLanguages = QLocale::system().uiLanguages();
     for (const QString &locale : uiLanguages) {
@@ -24,6 +32,7 @@ int main(int argc, char *argv[])
     }
 
     QQmlApplicationEngine engine;
+    engine.rootContext()->setContextProperty("contactModel", QVariant::fromValue(&model));
     engine.addImportPath("qrc:/qml");
     const QUrl url(QStringLiteral("qrc:/qml/main.qml"));
     QObject::connect(

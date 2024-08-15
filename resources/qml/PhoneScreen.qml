@@ -16,17 +16,62 @@ Rectangle {
 
     Text{
         id: backbtn
-        anchors.top: parent.top
-        anchors.topMargin: DefaultTheme.spacing
-        anchors.left: parent.left
-        anchors.leftMargin: DefaultTheme.spacing
+        anchors.bottom: dialbtn.top
+        anchors.bottomMargin: DefaultTheme.radius
+        anchors.right: parent.right
+        anchors.rightMargin: DefaultTheme.radius
         font.family: window.fontName
         color: DefaultTheme.textColor
         font.pixelSize: DefaultTheme.fontSize
-        text: "\uf060"
+        text: "\uf137"
         MouseArea{
             anchors.fill: parent
             onClicked: stack.pop()
+        }
+    }
+
+    Text{
+        id: dialbtn
+        anchors.bottom: parent.bottom
+        anchors.bottomMargin: DefaultTheme.radius
+        anchors.right: parent.right
+        anchors.rightMargin: DefaultTheme.radius
+        font.family: window.fontName
+        color: DefaultTheme.textColor
+        font.pixelSize: DefaultTheme.fontSize
+        text: "\uf13a"
+        MouseArea{
+            anchors.fill: parent
+            onClicked: drawer.open()
+        }
+    }
+
+    TabBar {
+        id: phonetab
+        width: parent.width
+        position: TabBar.Header
+
+        TabButton {
+            text: qsTr("Call History")
+            font.pixelSize: DefaultTheme.fontSizeS
+        }
+
+        TabButton {
+            text: qsTr("Contacts")
+            font.pixelSize: DefaultTheme.fontSizeS
+        }
+    }
+
+    StackLayout {
+        width: parent.width
+        currentIndex: phonetab.currentIndex
+        anchors.top: phonetab.bottom
+        anchors.topMargin: DefaultTheme.spacing
+        Item {
+            id: historyTab
+        }
+        Contacts {
+            id: contactsTab
         }
     }
 
@@ -51,6 +96,7 @@ Rectangle {
                 Layout.preferredHeight: drawer.height * 0.2
                 font.pixelSize: DefaultTheme.fontSize
                 horizontalAlignment: TextInput.AlignHCenter
+                readOnly: true
                 color: DefaultTheme.textColor
                 background: Item {
                 }
@@ -62,6 +108,10 @@ Rectangle {
                     color: DefaultTheme.textColor
                     font.pixelSize: DefaultTheme.fontSize
                     text: "\u232b"
+                    MouseArea{
+                        anchors.fill: parent
+                        onClicked: dialscreen.remove(dialscreen.length-1,dialscreen.length)
+                    }
                 }
             }
 
@@ -97,6 +147,11 @@ Rectangle {
                            font.pixelSize: DefaultTheme.fontSizeS
                            color: DefaultTheme.textColor
                            text: modelData
+                        }
+                        MouseArea{
+                            anchors.fill: parent
+                            cursorShape: Qt.PointingHandCursor
+                            onClicked: dialscreen.insert(dialscreen.length, modelData)
                         }
                     }
                 }
