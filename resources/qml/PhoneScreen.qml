@@ -23,6 +23,7 @@ Rectangle {
         font.family: window.fontName
         color: DefaultTheme.textColor
         font.pixelSize: DefaultTheme.fontSize
+        z: 1
         text: "\uf137"
         MouseArea{
             anchors.fill: parent
@@ -39,6 +40,7 @@ Rectangle {
         font.family: window.fontName
         color: DefaultTheme.textColor
         font.pixelSize: DefaultTheme.fontSize
+        z: 1
         text: "\uf13a"
         MouseArea{
             anchors.fill: parent
@@ -64,9 +66,13 @@ Rectangle {
 
     StackLayout {
         width: parent.width
+        height: parent.height
         currentIndex: phonetab.currentIndex
         anchors.top: phonetab.bottom
         anchors.topMargin: DefaultTheme.spacing
+        anchors.bottom: parent.bottom
+        anchors.bottomMargin: DefaultTheme.spacing
+
         Item {
             id: historyTab
         }

@@ -16,8 +16,8 @@ QtObject {
     property color textColor: "#FFFFFF"
     property color logoColor: "#F6781D"
 
-    property int rowHeight: 36
-    property int rowHeightL: 50
+    property int iconSize: 50
+    property int iconRadius: 25
     property int buttonHeight: 36
     property int logoSize: 120
     property int separatorThickness: 3

@@ -6,8 +6,9 @@ import Themes 1.0
 Item {
     ListView{
         id: listview
-        width: window.width
-        height: 200
+        anchors.fill: parent
+        spacing: DefaultTheme.radius
+        clip: true
 
         //Connected to the ContactModel from the C++ side.
         model: contactModel
@@ -17,19 +18,43 @@ Item {
             width: parent.width
             spacing: DefaultTheme.radius
 
-            Text {
-                id: person
-                font.pixelSize: DefaultTheme.fontSize
-                color: DefaultTheme.textColor
-                Layout.leftMargin: DefaultTheme.spacing
-                text: model.name
-            }
-            Text {
-                id: cnumber
-                font.pixelSize: DefaultTheme.fontSize
-                color: DefaultTheme.textColor
-                Layout.leftMargin: DefaultTheme.spacing
-                text: model.number
+            RowLayout{
+                width: parent.width
+                spacing: DefaultTheme.radius
+                Layout.leftMargin: DefaultTheme.radius
+
+                Rectangle{
+                    width: DefaultTheme.iconSize
+                    height: DefaultTheme.iconSize
+                    radius: DefaultTheme.iconRadius
+                    color: DefaultTheme.buttonColor
+
+                    Text {
+                        anchors.centerIn: parent
+                        font.pixelSize: DefaultTheme.fontSize
+                        color: DefaultTheme.textColor
+                        text: model.name[0].toUpperCase()
+                    }
+                }
+                //contact name and number
+                ColumnLayout{
+                    Layout.fillWidth: true
+                    spacing: DefaultTheme.radius
+                    Text {
+                        id: person
+                        font.pixelSize: DefaultTheme.fontSize
+                        color: DefaultTheme.textColor
+                        Layout.leftMargin: DefaultTheme.spacing
+                        text: model.name
+                    }
+                    Text {
+                        id: cnumber
+                        font.pixelSize: DefaultTheme.fontSizeS
+                        color: DefaultTheme.textColor
+                        Layout.leftMargin: DefaultTheme.spacing
+                        text: model.number
+                    }
+                }
             }
 
             Rectangle{
@@ -39,6 +64,9 @@ Item {
                 opacity: 0.2
                 color: DefaultTheme.textColor
             }
+        }
+
+        ScrollBar.vertical: ScrollBar {
         }
     }
 }
