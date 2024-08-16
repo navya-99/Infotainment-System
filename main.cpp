@@ -17,9 +17,13 @@ int main(int argc, char *argv[])
 
     //Creates a ContactModel and adds a few Contact objects to it.
     ContactModel model;
-    model.addContact(Contact("Navya Padiyar", "0099999999"));
+    model.addContact(Contact("Aman Verma", "1111199999"));
+    model.addContact(Contact("Ananya Sharma", "1111199999"));
+    model.addContact(Contact("Bhavya", "1111199999"));
+    model.addContact(Contact("Deepika Padukone", "1111199999"));
+    model.addContact(Contact("Gagan Sharma", "1111199999"));
+    model.addContact(Contact("Manoj Mishra", "0099999999"));
     model.addContact(Contact("Nidhi Padiyar", "123456789"));
-    model.addContact(Contact("Amma", "1111199999"));
 
     QTranslator translator;
     const QStringList uiLanguages = QLocale::system().uiLanguages();
