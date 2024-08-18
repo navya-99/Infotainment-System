@@ -9,5 +9,6 @@
         <file>qml/PhoneScreen.qml</file>
         <file>qml/SettingScreen.qml</file>
         <file>qml/Contacts.qml</file>
+        <file>qml/CallHistory.qml</file>
     </qresource>
 </RCC>

@@ -73,7 +73,7 @@ Rectangle {
         anchors.bottom: parent.bottom
         anchors.bottomMargin: DefaultTheme.spacing
 
-        Item {
+        CallHistory {
             id: historyTab
         }
         Contacts {

@@ -6,6 +6,7 @@ QT += quick #virtualkeyboard
 
 SOURCES += \
         contactmodel.cpp \
+        historymodel.cpp \
         main.cpp
 
 RESOURCES += ./resources/qml.qrc \
@@ -28,4 +29,5 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 HEADERS += \
-    contactmodel.h
+    contactmodel.h \
+    historymodel.h

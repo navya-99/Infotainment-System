@@ -7,7 +7,8 @@ import Themes 1.0
 
 Rectangle {
     id: root
-    anchors.fill: parent
+    width: window.width
+    height: window.height
     color: DefaultTheme.backgroundColor
 
     Text {

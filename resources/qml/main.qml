@@ -10,7 +10,7 @@ Window {
     width: DefaultTheme.width
     height: DefaultTheme.height
     visible: true
-    //flags: Qt.FramelessWindowHint
+    flags: Qt.FramelessWindowHint
 
     property alias fontName: fontLoader.name
 
