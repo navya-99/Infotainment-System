@@ -10,5 +10,6 @@
         <file>qml/SettingScreen.qml</file>
         <file>qml/Contacts.qml</file>
         <file>qml/CallHistory.qml</file>
+        <file>qml/SplashScreen.qml</file>
     </qresource>
 </RCC>

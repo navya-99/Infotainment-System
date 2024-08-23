@@ -19,12 +19,13 @@ Window {
         source: "qrc:/fonts/fontawesome.otf"
     }
 
-    Component{
+    Item{
         id: mainView
         HomeScreen{
             width: window.width
             height: window.height
         }
+        SplashScreen{}
     }
 
     StackView {
