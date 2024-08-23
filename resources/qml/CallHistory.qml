@@ -4,25 +4,6 @@ import QtQuick.Layouts 1.15
 import Themes 1.0
 
 Item {
-    // ListModel{
-    //     id: historyModel
-    //     ListElement{
-    //         name: "Amma"
-    //         number: "2924294"
-    //         time: "10:30"
-    //     }
-    //     ListElement{
-    //         name: "Nikitha"
-    //         number: "2924294"
-    //         time: "23:04"
-    //     }
-    //     ListElement{
-    //         name: "Namitha"
-    //         number: "2924294"
-    //         time: "18:35"
-    //     }
-    // }
-
     ListView{
         id: listview
         anchors.fill: parent
